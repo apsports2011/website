@@ -5,17 +5,24 @@
   box-sizing: border-box;
 }
 
+/* Body with background image */
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #f2f2f2;
+  background-color: #f2f2f2;
   color: #222;
   padding: 2rem 1rem;
   min-height: 100vh;
+
+  background-image: url('images/Background.jpg'); /* <-- Update path if needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Makes background scroll smoothly on desktop */
 }
 
 /* Gray Center Container */
 .container {
-  background: #e0e0e0;
+  background: rgba(255, 255, 255, 0.85); /* Slight transparency for readability */
   padding: 2rem;
   border-radius: 1rem;
   max-width: 800px;
@@ -108,5 +115,9 @@ footer {
 
   .subtitle {
     font-size: 1.1rem;
+  }
+
+  body {
+    background-attachment: scroll; /* Improves performance on mobile */
   }
 }
